@@ -1,13 +1,14 @@
-@import 'config';
+@import "config";
+@import "utilities";
 // General Styles
 * {
   margin: 0;
   padding: 0;
 }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   line-height: 1.6;
-} 
+}
 a {
   text-decoration: none;
   color: $dark-color;
@@ -15,9 +16,70 @@ a {
 ul {
   list-style: none;
 }
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   text-transform: uppercase;
 }
 img {
   width: 100%;
+}
+// Navbar
+#main-navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1rem;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+  }
+  a {
+    text-decoration: none;
+    color: $dark-color;
+    text-transform: uppercase;
+    border-bottom: 3px transparent solid;
+    padding-bottom: 0.5rem;
+    transition: border-color 0.5s;
+
+    &:hover {
+      border-color: $medium-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+/// Header Section
+#header {
+  &-home {
+    background: $bg-image no-repeat center right/cover;
+    background: before;
+    height: 100vh;
+    color: #fff;
+    opacity: 0.9;
+
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
+.lead {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.text-center {
+  text-align: center;
+}
+// Javascript Cursor
+.js-text > .txt {
+  border-right: 0.2rem solid #777;
 }
