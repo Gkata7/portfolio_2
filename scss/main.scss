@@ -12,6 +12,8 @@ body {
 a {
   text-decoration: none;
   color: $dark-color;
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 ul {
   list-style: none;
@@ -47,21 +49,20 @@ img {
     transition: border-color 0.5s;
 
     &:hover {
-      border-color: $medium-color;
+      border-color: $main-color;
     }
     &.current {
-      border-color: $main-color;
+      border-color: $medium-color;
     }
   }
 }
 /// Header Section
 #header {
   &-home {
-    background: $bg-image no-repeat center right/cover;
-    background: before;
+    position: relative;
     height: 100vh;
-    color: #fff;
-    opacity: 0.9;
+    color: black;
+    display: block;
 
     .header-content {
       text-align: center;
@@ -71,15 +72,103 @@ img {
       font-size: 3rem;
     }
   }
+  &-home::after {
+    content: "";
+    background: $bg-image no-repeat center left/cover;
+    opacity: 0.7;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
-.lead {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
+// Specialize Section
+#specialize {
+  .specials {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    .fas {
+      color: $main-color;
+      padding-bottom: 0.8rem;
+    }
+  }
 }
-.text-center {
-  text-align: center;
+// Workflow Section
+#workflow {
+  .process {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center;
+  }
+  .process-step {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 28px;
+    background-color: $main-color;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 1.5rem;
+    transition: all 1s;
+  }
+  .process-icon {
+    border-radius: 50%;
+    background: $dark-color;
+    color: #fff;
+    padding: 2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+    transition: all 1s;
+    &:hover {
+      background: $main-color;
+      width: 90px;
+      height: 90px;
+      line-height: 90px;
+      .process-step {
+        background: $dark-color;
+      }
+    }
+  }
+}
+// Footer
+#main-footer {
+  background-color: $dark-color;
+  color: #fff;
+  padding: 3rem;
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 1rem;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+.js-text {
+  color: $main-color;
 }
 // Javascript Cursor
 .js-text > .txt {
-  border-right: 0.2rem solid #777;
+  border-right: 0.2rem solid #fff;
 }

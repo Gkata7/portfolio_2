@@ -1,5 +1,5 @@
 .container {
-  max-width: 800px;
+  max-width: 1100px;
   padding: 0 1.5rem;
   margin: auto;
   overflow: hidden; }
@@ -14,7 +14,7 @@
 
 .btn-main {
   color: #fff;
-  background-color: #ccc; }
+  background-color: #ffbc00; }
 
 .btn-light {
   color: #fff;
@@ -23,7 +23,54 @@
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: #ffbc00; }
+  background-color: #ccc; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.lead {
+  font-size: 1.2rem;
+  margin-bottom: 2rem; }
+
+.text-center {
+  text-align: center; }
+
+.bottom-line {
+  height: 2px;
+  width: 5%;
+  background-color: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto;
+  margin-top: 10px; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  text-align: center;
+  font-weight: 100;
+  text-transform: uppercase; }
 
 * {
   margin: 0;
@@ -35,7 +82,9 @@ body {
 
 a {
   text-decoration: none;
-  color: #333; }
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: bold; }
 
 ul {
   list-style: none; }
@@ -65,28 +114,102 @@ img {
     padding-bottom: 0.5rem;
     transition: border-color 0.5s; }
     #main-navbar a:hover {
-      border-color: #ccc; }
-    #main-navbar a.current {
       border-color: #ffbc00; }
+    #main-navbar a.current {
+      border-color: #ccc; }
 
 #header-home {
-  background: url("../img/sf_skyline2.jpg") no-repeat center right/cover;
-  background: before;
+  position: relative;
   height: 100vh;
-  color: #fff;
-  opacity: 0.9; }
+  color: black;
+  display: block; }
   #header-home .header-content {
     text-align: center;
     padding-top: 20%; }
   #header-home h1 {
     font-size: 3rem; }
 
-.lead {
-  font-size: 1.1rem;
-  margin-bottom: 2rem; }
+#header-home::after {
+  content: "";
+  background: url("../img/header.jpg") no-repeat center left/cover;
+  opacity: 0.7;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1; }
 
-.text-center {
+#specialize .specials {
+  margin-top: 3rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); }
+  #specialize .specials .fas {
+    color: #ffbc00;
+    padding-bottom: 0.8rem; }
+
+#workflow .process {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1.5rem;
   text-align: center; }
 
+#workflow .process-step {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 28px;
+  background-color: #ffbc00;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  line-height: 15px;
+  padding: 1.5rem;
+  transition: all 1s; }
+
+#workflow .process-icon {
+  border-radius: 50%;
+  background: #333;
+  color: #fff;
+  padding: 2rem;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  position: relative;
+  transition: all 1s; }
+  #workflow .process-icon:hover {
+    background: #ffbc00;
+    width: 90px;
+    height: 90px;
+    line-height: 90px; }
+    #workflow .process-icon:hover .process-step {
+      background: #333; }
+
+#main-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 3rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; }
+    #main-footer .footer-content .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      padding: 1rem; }
+      #main-footer .footer-content .social .fab:hover {
+        background-color: #ffbc00; }
+
+.js-text {
+  color: #ffbc00; }
+
 .js-text > .txt {
-  border-right: 0.2rem solid #777; }
+  border-right: 0.2rem solid #fff; }
