@@ -56,6 +56,7 @@ img {
     }
   }
 }
+// Index.html
 /// Header Section
 #header {
   &-home {
@@ -82,6 +83,11 @@ img {
     right: 0;
     position: absolute;
     z-index: -1;
+  }
+  &-inner {
+    background: $bg-image no-repeat 20% 30% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
   }
 }
 // Specialize Section
@@ -110,7 +116,7 @@ img {
     top: 0;
     right: 0;
     font-size: 28px;
-    background-color: $main-color;
+    background-color: $medium-color;
     border-radius: 50%;
     height: 15px;
     width: 15px;
@@ -140,11 +146,55 @@ img {
     }
   }
 }
+// About HTML
+// About Section
+.about-content {
+  display: grid;
+  grid-template-areas: "bioimage bio bio";
+  grid-gap: 1.2rem;
+  margin-bottom: 75px;
+}
+.bio-img {
+  grid-area: bioimage;
+}
+.bio {
+  grid-area: bio;
+  border-left: 3px solid $main-color;
+  padding: 0.8rem;
+}
+// Skills Part
+#skills {
+  .progress {
+    overflow: hidden;
+    height: 20px;
+    background: $dark-color;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+    div {
+      height: 100%;
+      color: #fff;
+      text-align: center;
+      background: $main-color;
+    }
+  }
+}
+// Logos Section
+.about-logos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.2rem;
+  img {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+  }
+}
+
 // Footer
 #main-footer {
   background-color: $dark-color;
   color: #fff;
-  padding: 3rem;
+  padding: 2.5rem;
   .footer-content {
     display: flex;
     justify-content: space-between;
@@ -152,6 +202,7 @@ img {
     align-items: center;
     .social .fab {
       margin-right: 1rem;
+      color: #fff;
       border: 2px #fff solid;
       border-radius: 50%;
       height: 20px;

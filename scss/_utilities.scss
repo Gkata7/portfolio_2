@@ -30,6 +30,25 @@ a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
   background-color: $medium-color;
 }
+// Backgrounds
+.bg {
+  &-main {
+    background-color: $main-color;
+    color: #fff;
+  }
+  &-dark {
+    background-color: $dark-color;
+    color: #fff;
+  }
+  &-light {
+    background-color: $light-color;
+    color: #333;
+  }
+  &-medium {
+    background-color: $medium-color;
+    color: #333;
+  }
+}
 // Padding
 .py {
   &-1 {
@@ -64,6 +83,7 @@ input[class^="btn-"]:hover {
 .lead {
   font-size: 1.2rem;
   margin-bottom: 2rem;
+  text-align: center;
 }
 .text-center {
   text-align: center;
@@ -83,4 +103,5 @@ input[class^="btn-"]:hover {
   text-align: center;
   font-weight: 100;
   text-transform: uppercase;
+  margin-top: 0.5rem;
 }
