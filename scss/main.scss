@@ -1,5 +1,6 @@
 @import "config";
 @import "utilities";
+@import "item_grid";
 // General Styles
 * {
   margin: 0;
@@ -189,7 +190,21 @@ img {
     object-fit: cover;
   }
 }
-
+// Contact Page
+#contact {
+  .text-fields {
+    display: grid;
+    grid-template-areas: "name subject email" "message";
+    grid-gap: 1.2rem;
+    margin-bottom: 1.2rem;
+    .text-input {
+      padding: 0.5rem 1rem;
+    }
+  }
+  button[type="submit"] {
+    width: 50%;
+  }
+}
 // Footer
 #main-footer {
   background-color: $dark-color;
@@ -214,6 +229,11 @@ img {
         background-color: $main-color;
       }
     }
+  }
+}
+#tagline {
+  h1 {
+    font-size: 2rem;
   }
 }
 .js-text {

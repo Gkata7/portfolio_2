@@ -4,7 +4,7 @@
   margin: auto;
   overflow: hidden; }
 
-.btn-main, .btn-light {
+.btn-main, .btn-light, .btn-dark {
   display: inline-block;
   padding: 0.8rem 2rem;
   transition: 0.5s;
@@ -19,6 +19,10 @@
 .btn-light {
   color: #fff;
   background-color: #f4f4f4; }
+
+.btn-dark {
+  color: #fff;
+  background-color: #333; }
 
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
@@ -89,6 +93,81 @@ input[class^="btn-"]:hover {
   font-weight: 100;
   text-transform: uppercase;
   margin-top: 0.5rem; }
+
+.items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3); }
+
+.item {
+  position: relative;
+  background: #ffbc00;
+  overflow: hidden; }
+  .item::after {
+    content: "";
+    position: absolute;
+    display: block;
+    background: inherit;
+    opacity: 0.9;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: scale(2) translateX(-75%) translateY(-75%) rotate(-28deg);
+    transition: transform 3s cubic-bezier(0.2, 1, 0.3, 1); }
+  .item:hover:after {
+    transform: scale(2) translateX(0) translateY(0) rotate(28deg); }
+  .item:hover .item-image {
+    transform: scale(1.2); }
+  .item:hover .item-text {
+    opacity: 1;
+    transform: translateX(0); }
+  .item-image {
+    height: auto;
+    transform: translateZ(0);
+    display: block;
+    transition: transform 750ms cubic-bezier(0.2, 1, 0.3, 1); }
+  .item-image:before {
+    content: "";
+    display: block;
+    padding-top: 75%;
+    overflow: hidden; }
+  .item-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    line-height: 0; }
+  .item-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+    transform: translateY(-20%);
+    transition: opacity 500ms cubic-bezier(0.2, 1, 0.3, 1), transform 500ms cubic-bezier(0.2, 1, 0.3, 1);
+    transition-delay: 300ms; }
+  .item-text-wrap {
+    width: 100%;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%); }
+  .item-text-title {
+    font-size: 2rem;
+    padding: 0 1rem;
+    margin: 5px 0 0 0; }
+  .item-text-category {
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin: 0; }
 
 * {
   margin: 0;
@@ -245,6 +324,17 @@ img {
     height: 15vw;
     object-fit: cover; }
 
+#contact .text-fields {
+  display: grid;
+  grid-template-areas: "name subject email" "message";
+  grid-gap: 1.2rem;
+  margin-bottom: 1.2rem; }
+  #contact .text-fields .text-input {
+    padding: 0.5rem 1rem; }
+
+#contact button[type="submit"] {
+  width: 50%; }
+
 #main-footer {
   background-color: #333;
   color: #fff;
@@ -266,6 +356,9 @@ img {
       padding: 1rem; }
       #main-footer .footer-content .social .fab:hover {
         background-color: #ffbc00; }
+
+#tagline h1 {
+  font-size: 2rem; }
 
 .js-text {
   color: #ffbc00; }
