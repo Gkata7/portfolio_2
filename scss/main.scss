@@ -31,7 +31,7 @@ img {
 // Navbar
 #main-navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   padding-top: 1rem;
 
   ul {
@@ -43,7 +43,7 @@ img {
   }
   a {
     text-decoration: none;
-    color: $dark-color;
+    color: $light-color;
     text-transform: uppercase;
     border-bottom: 3px transparent solid;
     padding-bottom: 0.5rem;
@@ -53,7 +53,7 @@ img {
       border-color: $main-color;
     }
     &.current {
-      border-color: $medium-color;
+      border-color: $main-color;
     }
   }
 }
@@ -63,12 +63,13 @@ img {
   &-home {
     position: relative;
     height: 100vh;
-    color: black;
+    color: $main-color;
     display: block;
 
     .header-content {
       text-align: center;
       padding-top: 20%;
+      color: $light-color;
     }
     h1 {
       font-size: 3rem;
@@ -77,7 +78,6 @@ img {
   &-home::after {
     content: "";
     background: $bg-image no-repeat center left/cover;
-    opacity: 0.5;
     top: 0;
     left: 0;
     bottom: 0;
@@ -86,9 +86,13 @@ img {
     z-index: -1;
   }
   &-inner {
-    background: $bg-image no-repeat 20% 30% / cover;
+    background: $dark-color;
+    // background: $bg-image no-repeat 20% 30% / cover;
     height: 5.5rem;
     border-bottom: 3px solid $main-color;
+    a {
+      color: #fff;
+    }
   }
 }
 // Specialize Section
@@ -111,8 +115,9 @@ img {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 1.5rem;
     text-align: center;
-    h3 {
-      color: $main-color;
+    h1 {
+      color: $dark-color;
+      margin-bottom: 10px;
     }
   }
   .process-step {
@@ -120,7 +125,7 @@ img {
     top: 0;
     right: 0;
     font-size: 26px;
-    background-color: $medium-color;
+    background-color: $main-color;
     border-radius: 50%;
     height: 15px;
     width: 15px;
@@ -133,16 +138,16 @@ img {
     background: $dark-color;
     color: #fff;
     padding: 2rem;
-    width: 70px;
-    height: 70px;
+    width: 80px;
+    height: 80px;
     line-height: 70px;
     text-align: center;
     position: relative;
     transition: all 1s;
     &:hover {
       background: $main-color;
-      width: 90px;
-      height: 90px;
+      width: 100px;
+      height: 100px;
       line-height: 90px;
       .process-step {
         background: $dark-color;
@@ -161,6 +166,9 @@ img {
     margin-top: 20px;
     font-size: 1.2rem;
   }
+  a {
+    color: $light-color !important;
+  }
 }
 .bio-img {
   grid-area: bioimage;
@@ -168,16 +176,23 @@ img {
 .bio {
   grid-area: bio;
   border-left: 3px solid $main-color;
-  padding: 0.8rem;
+  padding: 1rem;
+  p {
+    text-align: justify;
+  }
+  h2 {
+    color: $light-color;
+  }
 }
 // Skills Part
 #skills {
   .progress {
     overflow: hidden;
-    height: 20px;
-    background: $dark-color;
+    height: 30px;
+    background: $light-color;
     border-radius: 5px;
     margin-bottom: 0.5rem;
+    // animation: progress 5s infinite;
     div {
       height: 100%;
       color: #fff;
@@ -252,3 +267,6 @@ img {
 .js-text > .txt {
   border-right: 0.2rem solid #fff;
 }
+
+// Media Queries
+@import "media";
