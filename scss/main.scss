@@ -127,8 +127,8 @@ img {
     font-size: 26px;
     background-color: $main-color;
     border-radius: 50%;
-    height: 15px;
-    width: 15px;
+    height: 12px;
+    width: 12px;
     line-height: 15px;
     padding: 1.5rem;
     transition: all 1s;
@@ -161,10 +161,11 @@ img {
   display: grid;
   grid-template-areas: "bioimage bio bio";
   grid-gap: 1.2rem;
-  margin-bottom: 75px;
+  margin-bottom: 60px;
+  font-family: "Cairo", sans-serif;
   p {
     margin-top: 20px;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   a {
     color: $light-color !important;
@@ -186,18 +187,39 @@ img {
 }
 // Skills Part
 #skills {
-  .progress {
-    overflow: hidden;
-    height: 30px;
-    background: $light-color;
-    border-radius: 5px;
-    margin-bottom: 0.5rem;
-    // animation: progress 5s infinite;
+  .progress-bars {
+    color: $dark-color;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.2rem;
+    padding: 1rem;
+    margin: auto;
+    text-align: center;
+    .skills-title {
+      font-size: 1.6rem;
+    }
+    .experience {
+      font-size: 1.2rem;
+      a {
+        color: $main-color;
+      }
+    }
+    .bars {
+      span {
+        display: inline-block;
+        width: 0.9rem;
+        height: 1.6rem;
+        border-radius: 4px;
+        background: $main-color;
+        margin: 0 2px;
+      }
+      .project {
+        background: $dark-color;
+      }
+    }
     div {
-      height: 100%;
-      color: #fff;
-      text-align: center;
-      background: $main-color;
+      background: #fff;
+      padding: 0.8rem;
     }
   }
 }

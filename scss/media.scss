@@ -43,7 +43,6 @@
         border-top: 3px solid #ffbc00;
         border-left: none;
         p {
-          font-weight: bold;
           text-align: justify;
         }
       }
@@ -51,6 +50,9 @@
   }
   #skills {
     border-bottom: 2px solid #f4f4f4;
+    .progress-bars {
+      grid-template-columns: 1fr;
+    }
   }
   #logos {
     display: none;
