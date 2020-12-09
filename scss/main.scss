@@ -245,6 +245,18 @@ img {
     margin-bottom: 1.2rem;
     .text-input {
       padding: 0.5rem 1rem;
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .message-input {
+        grid-area: message;
+      }
     }
   }
   button[type="submit"] {

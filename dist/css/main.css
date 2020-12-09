@@ -364,6 +364,14 @@ img {
   margin-bottom: 1.2rem; }
   #contact .text-fields .text-input {
     padding: 0.5rem 1rem; }
+    #contact .text-fields .text-input .name-input {
+      grid-area: name; }
+    #contact .text-fields .text-input .subject-input {
+      grid-area: subject; }
+    #contact .text-fields .text-input .email-input {
+      grid-area: email; }
+    #contact .text-fields .text-input .message-input {
+      grid-area: message; }
 
 #contact button[type="submit"] {
   width: 50%; }
