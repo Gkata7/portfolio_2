@@ -348,22 +348,32 @@ img {
 
 .about-logos {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.2rem; }
   .about-logos img {
     margin-top: 1rem;
     width: 100%;
-    height: 15vw;
+    height: 16vw;
     object-fit: cover;
     border-radius: 5px; }
+    #header-home::after {
+      content: "";
+      background: url("../img/header.jpg") no-repeat center left/cover;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      z-index: -1; }
 
 #contact .text-fields {
   display: grid;
   grid-template-areas: "name subject email" "message";
   grid-gap: 1.2rem;
-  margin-bottom: 1.2rem; }
+  width: 70%;
+  margin-left: 15%; }
   #contact .text-fields .text-input {
-    padding: 0.5rem 1rem; }
+    padding: 0.8rem 1rem; }
     #contact .text-fields .text-input .name-input {
       grid-area: name; }
     #contact .text-fields .text-input .subject-input {
@@ -374,7 +384,8 @@ img {
       grid-area: message; }
 
 #contact button[type="submit"] {
-  width: 50%; }
+  width: 50%;
+  padding: 1.3rem; }
 
 #main-footer {
   background-color: #333;
@@ -416,7 +427,7 @@ img {
 
 @media (max-width: 800px) {
   #header-home {
-    height: 90vh; }
+    height: 70vh; }
   #specialize .specials,
   #workflow .process,
   #work .items {
@@ -432,7 +443,7 @@ img {
     margin-bottom: 0; }
     #about .about-content img {
       width: 100%;
-      height: 70vh;
+      height: 60vh;
       object-fit: cover; }
     #about .about-content .bio {
       border-top: 3px solid #ffbc00;
