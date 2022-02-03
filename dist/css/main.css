@@ -370,8 +370,7 @@ img {
   display: grid;
   grid-template-areas: "name subject email" "message";
   grid-gap: 1.2rem;
-  width: 70%;
-  margin-left: 15%; }
+  width: 70%; }
   #contact .text-fields .text-input {
     padding: 0.8rem 1rem; }
     #contact .text-fields .text-input .name-input {
