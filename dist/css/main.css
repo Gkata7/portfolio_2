@@ -353,7 +353,7 @@ img {
   .about-logos img {
     margin-top: 1rem;
     width: 100%;
-    height: 16vw;
+    height: 25vw;
     object-fit: cover;
     border-radius: 5px; }
     #header-home::after {
