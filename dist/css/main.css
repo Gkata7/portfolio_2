@@ -358,7 +358,7 @@ img {
     border-radius: 5px; }
     #header-home::after {
       content: "";
-      background: url("../img/header.jpg") no-repeat center left/cover;
+      background: url("../img/header_2.jpg") no-repeat center left/cover;
       top: 0;
       left: 0;
       bottom: 0;
